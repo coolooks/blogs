@@ -22,28 +22,28 @@ interface Props {
 const { page, uniqueTags } = Astro.props;
 
 const meta = {
-	title: "Posts",
-	description: "Ready my collection of posts and the things that interest me",
+	title: "文章",
+	description: "我的文章集集和我感兴趣的东西",
 };
 
 const paginationProps = {
 	...(page.url.prev && {
 		prevUrl: {
 			url: page.url.prev,
-			text: `← Previous Posts`,
+			text: `← 上一篇`,
 		},
 	}),
 	...(page.url.next && {
 		nextUrl: {
 			url: page.url.next,
-			text: `Next Posts →`,
+			text: `上一篇 →`,
 		},
 	}),
 };
 ---
 
 <PageLayout meta={meta}>
-	<h1 class="title mb-6">Posts</h1>
+	<h1 class="title mb-6">文章</h1>
 	<div class="grid gap-y-16 sm:grid-cols-[3fr_1fr] sm:gap-x-8">
 		<section aria-label="Blog post list">
 			<ul class="space-y-8 text-start">
@@ -77,7 +77,7 @@ const paginationProps = {
 							<path d="M17.573 18.407l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-7.117 -7.116" />
 							<path d="M6 9h-.01" />
 						</svg>
-						Tags
+						标签
 					</h2>
 					<ul class="flex flex-wrap gap-2 text-bgColor">
 						{uniqueTags.map((tag) => (
@@ -94,7 +94,7 @@ const paginationProps = {
 					</ul>
 					<span class="mt-4 block sm:text-end">
 						<a class="sm:hover:text-accent" href="/blogs/tags/" aria-label="View all blog categories">
-							View all →
+							更多 →
 						</a>
 					</span>
 				</aside>

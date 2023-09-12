@@ -7,13 +7,13 @@ const allPosts = await getCollection("post");
 const allTags = getUniqueTagsWithCount(allPosts);
 
 const meta = {
-	title: "All Tags",
-	description: "A list of all the topics I've written about in my posts",
+	title: "标签",
+	description: "我在文章中所写的所有主题的列表",
 };
 ---
 
 <PageLayout meta={meta}>
-	<h1 class="title mb-6">Tags</h1>
+	<h1 class="title mb-6">标签</h1>
 	<ul class="space-y-4">
 		{
 			allTags.map(([tag, val]) => (
