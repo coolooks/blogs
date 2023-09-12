@@ -15,7 +15,7 @@ const {
 	slug,
 } = post;
 const socialImage = ogImage ?? `/og-image/${slug}.png`;
-const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString();
+const articleDate = updatedDate?.toDateString() ?? publishDate.toDateString();
 const { headings } = await post.render();
 ---
 
@@ -69,3 +69,9 @@ const { headings } = await post.render();
 		</svg>
 	</button>
 </BaseLayout>
+
+<style>
+	.prose{
+		max-width: 98ch !important;
+	}
+</style>

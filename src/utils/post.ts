@@ -1,6 +1,6 @@
 import type { CollectionEntry } from "astro:content";
 
-export function sortMDByDate(posts: Array<CollectionEntry<"post">>) {
+export function sortMDByDate (posts: Array<CollectionEntry<"post">>) {
 	return posts.sort((a, b) => {
 		const aDate = new Date(a.data.updatedDate ?? a.data.publishDate).valueOf();
 		const bDate = new Date(b.data.updatedDate ?? b.data.publishDate).valueOf();
@@ -8,15 +8,15 @@ export function sortMDByDate(posts: Array<CollectionEntry<"post">>) {
 	});
 }
 
-export function getAllTags(posts: Array<CollectionEntry<"post">>) {
+export function getAllTags (posts: Array<CollectionEntry<"post">>) {
 	return posts.flatMap((post) => [...post.data.tags]);
 }
 
-export function getUniqueTags(posts: Array<CollectionEntry<"post">>) {
+export function getUniqueTags (posts: Array<CollectionEntry<"post">>) {
 	return [...new Set(getAllTags(posts))];
 }
 
-export function getUniqueTagsWithCount(
+export function getUniqueTagsWithCount (
 	posts: Array<CollectionEntry<"post">>,
 ): Array<[string, number]> {
 	return [
