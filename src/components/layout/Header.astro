@@ -36,9 +36,9 @@ const url = new URL(Astro.request.url);
 >
 	<div class="flex sm:flex-col">
 		<a
-			href="/"
+			href="/blogs"
 			class="inline-flex items-center grayscale hover:filter-none sm:relative sm:inline-block"
-			aria-current={url.pathname === "/" ? "page" : false}
+			aria-current={url.pathname === "/blogs" ? "page" : false}
 		>
 			<svg
 				class="me-3 h-10 w-6 sm:absolute sm:start-[-4.5rem] sm:me-0 sm:h-20 sm:w-12"
@@ -48,7 +48,6 @@ const url = new URL(Astro.request.url);
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 272 480"
 			>
-				<title>Logo</title>
 				<path
 					d="M181.334 93.333v-40L226.667 80v40l-45.333-26.667ZM136.001 53.333 90.667 26.667v426.666L136.001 480V53.333Z"
 					fill="#B04304"></path>
@@ -60,7 +59,7 @@ const url = new URL(Astro.request.url);
 					fill="#53C68C"></path>
 				<path d="M45.334 240 0 213.334v120L45.334 360V240Z" fill="#B04304"></path>
 			</svg>
-			<span class="text-xl font-bold sm:text-2xl">Astro Cactus</span>
+			<span class="text-xl font-bold sm:text-2xl">Cooloo's blog</span>
 		</a>
 		<nav
 			id="navigation-menu"
