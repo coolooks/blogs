@@ -1,7 +1,7 @@
 ---
 title: "管理后台升级vue-cli5"
-description: "一篇关于升级vue-cli5的过程讲述，介绍了如何配置webpack优化编译，以及升级scss的说明。"
-publishDate: "2022/06/02"
+description: "一篇关于升级vue-cli5的过程讲述，配置webpack优化编译，以及升级scss的说明。"
+publishDate: "2022/04/02"
 tags: ["vue", "vue-cli", "webpack"]
 ---
 
