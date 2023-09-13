@@ -12,42 +12,37 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 	{
 		title: "Astro",
-		desc: "Build fast websites, faster.",
+		desc: "构建快速、以内容为中心的 Web 框架。",
 		href: "https://astro.build",
 	},
 	{
 		title: "Astro Assets",
-		desc: "Built-in optimized asset support.",
+		desc: "Astro 内置的优化资产支持。",
 		href: "https://docs.astro.build/en/guides/assets/",
 	},
 	{
 		title: "Tailwind CSS",
-		desc: "Rapidly build modern websites without ever leaving your HTML.",
+		desc: "快速、灵活、可靠，没有运行时负担。",
 		href: "https://tailwindcss.com",
 	},
 	{
 		title: "Markdown",
-		desc: "Simple and easy-to-use markup language.",
+		desc: "简单易用的标记语言。",
 		href: "https://www.markdownguide.org/",
 	},
 	{
 		title: "MDX",
-		desc: "Markdown for the component era.",
+		desc: "让 Markdown 步入组件时代。",
 		href: "https://mdxjs.com/",
 	},
 	{
-		title: "Satori",
-		desc: "Generating png Open Graph images for blog posts.",
-		href: "https://github.com/vercel/satori",
-	},
-	{
 		title: "Pagefind",
-		desc: "A fully static search library.",
+		desc: "一个完全静态的搜索库。",
 		href: "https://pagefind.app/",
 	},
 	{
 		title: "Astro Icon",
-		desc: "An easy to use Icon component for Astro.",
+		desc: "Astro 的一个易于使用的图标组件。",
 		href: "https://github.com/natemoo-re/astro-icon#readme",
 	},
 ];
@@ -86,8 +81,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 							class="cactus-link inline-block"
 						>
 							{title}
-						</a>: 
-						<p class="inline-block sm:mt-2">{desc}</p>
+						</a>：<p class="inline-block sm:mt-2">{desc}</p>
 					</li>
 				))
 			}

@@ -11,10 +11,9 @@ interface Props {
 
 const { post } = Astro.props;
 const {
-	data: { title, description, ogImage, publishDate, updatedDate },
+	data: { title, description, publishDate, updatedDate },
 	slug,
 } = post;
-const socialImage = ogImage ?? `/og-image/${slug}.png`;
 const articleDate = updatedDate?.toDateString() ?? publishDate.toDateString();
 const { headings } = await post.render();
 ---
@@ -38,7 +37,7 @@ const { headings } = await post.render();
 	observer.observe(targetHeader);
 </script>
 
-<BaseLayout meta={{ title, description, articleDate, ogImage: socialImage }}>
+<BaseLayout meta={{ title, description, articleDate }}>
 	<div class="gap-x-10 lg:flex lg:items-start">
 		{!!headings.length && <TOC headings={headings} />}
 		<article class="flex-grow break-words" data-pagefind-body>
